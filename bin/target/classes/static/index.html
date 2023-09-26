@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/datepicker.css">
+  <style>
+  h1{
+   margin-top: 20px;
+   }
+   .container, h1{
+   text-align:center;
+    }
+    .table-wrapper
+{
+    border: 1px solid red;
+    width: 700px;
+    height: 150px;
+    overflow: auto;
+}
+
+table
+{
+    border: 1px solid black;
+    margin-right: 20px;
+}
+  </style>
+</head>
+<head>
+    <meta charset="utf-8">
+    <title>CakeStore- Cake Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&family=Pacifico&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center bg-secondary py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <i class="bi bi-envelope fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Email</h6>
+                        <span>nguyenducson502@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center bg-primary border-inner py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-dark me-3"></i>Cửa hàng bánh CakeCake</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center bg-secondary py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Liên hệ</h6>
+                        <span>+(84)966577314</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-primary me-3"></i>CakeZone</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto mx-lg-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Trang chủ</a>
+                <a href="about.html" class="nav-item nav-link">Thông tin</a>
+                <a href="menu.html" class="nav-item nav-link">Thực đơn & Giá</a>
+                <a href="team.html" class="nav-item nav-link">Master Chefs</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang liên hệ</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="service.html" class="dropdown-item">Dịch vụ</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="font-secondary text-primary mb-4">Siêu ngon</h1>
+                    <h1 class="display-1 text-uppercase text-white mb-4">CakeZone</h1>
+                    <h1 class="text-uppercase text-white">Bánh tốt nhất ĐC :)</h1>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
+                        <a href="" class="btn btn-primary border-inner py-3 px-5 me-5">Đọc thêm</a>
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/0Dsi4CFUW8g" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h5 class="font-weight-normal text-white m-0 ms-4 d-none d-sm-block">Play Video</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Video Modal Start -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-12">
+          <div class="row">
+            <!-- Reports -->
+            <div class="col-15">
+              <div class="card">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Bánh ngọt</h5>
+
+              <!-- Slides with captions -->
+              <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14"  aria-current="true" aria-label="Slide 2"></button>
+            	<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-current="true" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLWJN5H7iLaROTVx5oE8ul6RZvcjZtk1_9XJcwpLHbdXu0o6LC2Qu9nKrkjhTcwSur-MXKZIJOfzHeZTUVXrRaLb-AfKE6Z6Fl9mcIxqTx8rTtvYUx0H6x1zhm6KTUc-XHMKujZTF7HxHp3G2SsIyT7L=w1145-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLWfCcxRKI0JVffhUWbYy6Q3yZXYSstLOVrTQzc9qoNy4knsLHG-aA7q22ZzZolNq9XpDXNe1EAjwEgRS12IWxlDAtm2tw6ttHyfGdVE8SWEqZ5UUKfyLFCUSRF_83EnbiYq5LTkxHI9IzyoDtr_6Bkq=w1292-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLXyXNgbuPi60U2DbYSoslwt5HrIrFsoJQ8B-7A37S_iO4MKi-6P5xrD9MZb_qCGo1EGROcTohJJkrjwOxorfQg8rHvaNGP9JeXDE5wa6vn_pWyvWi9Mr9PXr3ceQSMTPtzDv0tt_1AygEOF7YUOiCWp=w1099-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLUem9wNU3dJnKJMtp8lwVtdlPaRZDxzL-og8wJvQmDi2fJGBiCqigIqFlTfgKFEUUF2rjz-HrS5HGuLk2zXN3TSJ4pMWX5LFeTor5DnJliJyu9hw73Xj2aO5EHzuIRb3uRtKPKoEmg-xybgeVVueTq1=w727-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLWfCcxRKI0JVffhUWbYy6Q3yZXYSstLOVrTQzc9qoNy4knsLHG-aA7q22ZzZolNq9XpDXNe1EAjwEgRS12IWxlDAtm2tw6ttHyfGdVE8SWEqZ5UUKfyLFCUSRF_83EnbiYq5LTkxHI9IzyoDtr_6Bkq=w1292-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLUHg90FFWr-_a9LVQWqTuR-uzy6FG-5eOJAI2DQCuOk6BxPJDKIA5PUBbSZcUkn3EwNY6mlogDz02gHIqaOOjaBjkrcBY9X3kkU_u5cPZasf7pWpQRveLKea_ZnRC1--_k5nSjFK7XiCAUoszp3jj2D=w1148-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLXyXNgbuPi60U2DbYSoslwt5HrIrFsoJQ8B-7A37S_iO4MKi-6P5xrD9MZb_qCGo1EGROcTohJJkrjwOxorfQg8rHvaNGP9JeXDE5wa6vn_pWyvWi9Mr9PXr3ceQSMTPtzDv0tt_1AygEOF7YUOiCWp=w1099-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLXl6H9YzDnm6qvm-9xI73q8BzLI6joPdJrUay0pUB5RJzJgCYtPoW_m1HQzae0uoGExNf-77B-eB_VdvJFRXuR4OIeNKo3C1CyDV1ekipt0SRq0PNsWA17Yiahiha-sJsc48BxQedYyx4_aOJtE42B5=w1292-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLWZoOnwfrLEj0talBavzXCKHAJ-OFBHtrvc_XByIIJ3qHu0722JMSkZSMJgEo7BEJf9q71jjrFpKQBz5lYn6wdxt12n-V257MOni76dN-K6m4aEDUxPtH_C7w5s1B4so2PPcu_ah4p5FDRGx56KJJVs=w1235-h970-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLWJN5H7iLaROTVx5oE8ul6RZvcjZtk1_9XJcwpLHbdXu0o6LC2Qu9nKrkjhTcwSur-MXKZIJOfzHeZTUVXrRaLb-AfKE6Z6Fl9mcIxqTx8rTtvYUx0H6x1zhm6KTUc-XHMKujZTF7HxHp3G2SsIyT7L=w1145-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLVHAlEx38asEOJuRC7XFGWra9IU0GCrnW-98Xop2dnLxXI521Qw1Hnv96Pxfftty3_pWEqxYgqfqWvPNe9O8ZdPTvOepKekkBSq005EqTRIJIJXk3BWrSERfeAMcsyw7sKDQyeLFggXjt8e2gCOOHxQ=w1158-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLXyXNgbuPi60U2DbYSoslwt5HrIrFsoJQ8B-7A37S_iO4MKi-6P5xrD9MZb_qCGo1EGROcTohJJkrjwOxorfQg8rHvaNGP9JeXDE5wa6vn_pWyvWi9Mr9PXr3ceQSMTPtzDv0tt_1AygEOF7YUOiCWp=w1099-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLX-JaWVZtQlIHoLSIcLNa0aiY_1AWLrsn50U2dmSXyogDRcZPCKfJVVRaBCs8Wz6HqTq7_K0avoP7ipAPYFyEC1lYUJbceL242PckrB9-engXuPDFETa3lV76g5CwkAF_jytpgjnKRtzQO_agFn5Ra-=w1292-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLUadEdkwOpCu2LSd0JypLwyvkZtnmm1TyvCAXecRRo1pU78Fe_SIisJvhWBtaGeuBZYAEj-gu6zdx5bj5ndL2Zo9O000Gv4ECSiU51MN2fIgw1iLEEmHxZUxBLBbbr3OVBxI4An2kWz55pXz7a0zM_v=w1326-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLVNoinvEcObBs7SH79J3tAyXR8HbZ6VCMOopEn-KRuU00nhrunMWNTgnhnNLP94kcU9qWq7Uj4YBHXFZngLWsKihFb2DujOU0HY8a9w1lvg7iO2A5nUc46IBhUU288XZq0fz51B3ua9be5u05emYsyV=w1856-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+                   <div class="carousel-item">
+                    <img src="https://lh3.googleusercontent.com/pw/AM-JKLW403fdmyo297W7F5E814vP4Sz-Xt61za2soAv3OT1DRueFYDKNuUl7v9rE0u9dPuGHjdI_0Ri-bKWTuzOYFkP7kozA93RuncEhYcndOFU2_IQq7lksmnGpaXdxR33TgM_GtAL_HLshG9-Ti1J2RYOp=w1099-h969-no" class="d-block w-100" alt="...">
+                  </div> 
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+              </div><!-- End Slides with captions -->
+
+            </div>
+          </div>
+              </div>
+            </div><!-- End Reports -->
+          </div>
+        </div><!-- End Left side columns -->
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- About Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary"Về chúng tôi</h2>
+                <h1 class="display-4 text-uppercase">Chào mừng đến với CakeZone</h1>
+            </div>
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="https://lh3.googleusercontent.com/pw/AM-JKLWfCcxRKI0JVffhUWbYy6Q3yZXYSstLOVrTQzc9qoNy4knsLHG-aA7q22ZzZolNq9XpDXNe1EAjwEgRS12IWxlDAtm2tw6ttHyfGdVE8SWEqZ5UUKfyLFCUSRF_83EnbiYq5LTkxHI9IzyoDtr_6Bkq=w1292-h969-no" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pb-5">
+                    <h4 class="mb-4">Chiếc bánh kem hảo hạng với nhiều hoa quả phía trên</h4>
+                    <p class="mb-5"></p>
+                    <div class="row g-5">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style="width: 90px; height: 90px;">
+                                <i class="fa fa-heartbeat fa-2x text-white"></i>
+                            </div>
+                            <h4 class="text-uppercase">100% Tốt cho sức khỏe</h4>
+                            <p class="mb-0">Bánh của chúng tôi làm rất cẩn thận, đảm bảo các quy trình nghiêm ngặt</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center justify-content-center bg-primary border-inner mb-4" style="width: 90px; height: 90px;">
+                                <i class="fa fa-award fa-2x text-white"></i>
+                            </div>
+                            <h4 class="text-uppercase">Award Winning</h4>
+                            <p class="mb-0">Được nhiều khán giả lựa chọn :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Facts Start -->
+    <div class="container-fluid bg-img py-5 mb-5">
+        <div class="container py-5">
+            <div class="row gx-5 gy-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-primary border-inner d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-star text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h6 class="text-primary text-uppercase">Our Experience</h6>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-primary border-inner d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h6 class="text-primary text-uppercase">Cake Specialist</h6>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-primary border-inner d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-check text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h6 class="text-primary text-uppercase">Complete Project</h6>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex">
+                        <div class="bg-primary border-inner d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fa fa-mug-hot text-white"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h6 class="text-primary text-uppercase">Happy Clients</h6>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid about py-5">
+        <div class="container">
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Thực đơn & Giá</h2>
+                <h1 class="display-4 text-uppercase">Khám phá bánh</h1>
+            </div>
+            <div class="tab-class text-center">
+                <ul class="nav nav-pills d-inline-flex justify-content-center bg-dark text-uppercase border-inner p-4 mb-5">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-1">Sinh nhật</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="pill" href="#tab-2">Cưới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" data-bs-toggle="pill" href="#tab-3">Đặt hàng</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0">
+                        <div class="row g-3">
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-1.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh sinh nhật</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-2" class="tab-pane fade show p-0">
+                        <div class="row g-3">
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0"400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="img/cake-2.jpg" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">400K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh cưới</h5>
+                                        <span>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane fade show p-0 active">
+                        <div class="row g-3">
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEXfoGoQzGqR_KRHNYLfhjvPH1t9GYdkoCRR3zWNyxJibL1eIGr675kP3Cm1AjdxcjZvGw_x3NLhCw1waqJX8cCCHj58l82ZpSS6IseHckKaVk4yJuXIogXEPK1WYr_pHBc4SwDF9uiKipUAVfA_JQH4=w467-h294-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">45K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh nướng 150g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEV2eoWnrFgqle02j2tRaoyvBEuO0Y_Y0uQsUQYzoONZXsy1R0uBbnFoU16DEmkS4dW8R8kq-oKsMX0CGEMBSe6s3_9tt6ZdipD1Ul5gSf9nLvrlj-Ec765OaurwFSEiJoMnIX7p-PWRDUpYxNRmpeud=w759-h452-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">40K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh nướng 120g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEXd8PeAC38UR3afF9stHwTnNbbLFxU83VKZnCXr2fHlBDunzFDCOkPTvV09x96ZMBAw52UCfPprQHOhyzQR-8LpZj8u7OoeWlc3uI5hvyjcz0kbMrRGAFbwG_cBRR4ihqVrnW5xXVTubGHDByZbQjb5=w1904-h969-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">25K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Bánh nướng 70g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEUwTu86TQG_jL1ekCC10KlAhCpYNdxY4c2fUKwIbbkkCyCov5PesjYVml9BVsVMF-sOX7jp-P0XGYvuQeSDydys5OdLUBHjFDEX9b-65cq8B8pdIlXyjC6qkP0VCVyH2NqYwFkoOBBgQD5clojqcf7t=w709-h419-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">195k</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Hộp 4bánh 150g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEWWZv67jU4VlNXxD6NtE2zc29zoaT0MpJpHVcbS4Xj0eY70Y0exF-MSgUJNvaRRpNguc2kbSWe98zc8ehroSsCclL5_pXmYW2sUmt1Ps36oNkvfqlkpTUW9D2mLxzZmjjSCZ1Y4UZSSUqV5FS507hxf=w1921-h793-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">100K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Hộp 2bánh 150g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex h-100">
+                                    <div class="flex-shrink-0">
+                                        <img class="img-fluid" src="https://lh3.googleusercontent.com/pw/AL9nZEXvPV8T2iaglBXukCb-W6oEbD1ocQG0IepU1INaDjrEZdjSG5idbsn_jHvJr76n3mGYC6dC9MN9rJypHCkGxWV7eq8uNA72Bs3x3GyQRAZBnt0xCzKUduItR5ty-ZnEU9SlGaKxjDSfPmTObg9EB5kn=w1042-h782-no?authuser=0" alt="" style="width: 150px; height: 85px;">
+                                        <h4 class="bg-dark text-primary p-2 m-0">120K</h4>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center text-start bg-secondary border-inner px-4">
+                                        <h5 class="text-uppercase">Hộp 6bánh 50g</h5>
+                                        <span>Các loại nhân: Lá dứa, khoai môn, đậu xanh, đậu đỏ, cốm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="modal fade" id="modal" role="dialog"  aria-labelledby="modalLabel" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="height: 600px; width: 800px">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Đặt hàng</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height: 600px; width: 700px">
+           		<form action="#" th:action="@{/save-order}" th:object="${order}" method="post">
+  			<table>
+  			<tr>
+  				<th>Số điện thoại</th>
+				<td><input type="text" class="form-control" id="phone" th:field="*{phone}"></td>
+				<th>Password</th>
+				<td><input type="password" class="form-control" id="password" ></td>
+				<td><button type="button" class="btn btn-primary" onclick="load();">Load</button> </td>
+		  </tr>
+		  <br><br>
+			  <tr>
+				<th>Tên bánh</th>
+				<td>
+					<select class="form-control" name="cakeId"> id="dropDownList">
+					    <option value="0">Chọn bánh</option>
+					    <option th:each="cake : ${listCake}" th:value="${cake.cakeId}" th:text="${cake.cakeName}"></option>
+					</select>				
+					</td>
+				<th>Số lượng</th>
+				<td><input type="text" class="form-control" id="number" th:field="*{number}"></td>
+			  </tr>
+			  <tr>
+				<th>Tên khách hàng</th>
+				<td><input type="text" class="form-control" id="customer" th:field="*{customer}"></td>
+				<th>Email</th>
+<!--				<td><input type="text" class="form-control" id="email" th:field="*{email}"></td>-->
+			  </tr>
+			  <tr>
+				<th>Địa chỉ</th>
+				<td><input type="text" class="form-control" id="address" th:field="*{address}"></td>
+				<th>Ngày nhận</th>
+				<td><input type="text" class="form-control" id="image" data-toggle="datepicker" th:field="*{dateShip}"></td>
+				<td>
+				</td>
+			  </tr>
+			 </table>
+		    <menu>
+		     <button type="submit" class="btn btn-primary">Thêm</button>
+		    </menu>
+	  </form>
+	  	<div class="table-wrapper">
+		  <table style="width:700px" id ="myTable" border="1">
+		  </table>
+		</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Start -->
+    <div class="container-fluid service position-relative px-5 mt-5" style="margin-bottom: 135px;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bánh sinh nhật</h4>
+                        <p>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum</p>
+                        <a class="text-uppercase text-dark" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bánh cưới</h4>
+                        <p>Ipsum ipsum clita erat amet dolor sit justo sea eirmod diam stet sit justo amet tempor amet kasd lorem dolor ipsum</p>
+                        <a class="text-uppercase text-dark" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-primary border-inner text-center text-white p-5">
+                        <h4 class="text-uppercase mb-3">Bánh đặt hàng</h4>
+                        <p>Nhân dịp trung thu 2022, cửa hang CakeCake có rất nhiều các loại bánh cho các quý vị lựa chọn!/n Mời các bạn tham khảo! :)</p>
+                        <a class="text-uppercase text-dark" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-6 text-center">
+                    <h3 class="text-uppercase text-light mb-4">Nhanh tay đặt hàng! Rất nhiều các phần quà hấp dẫn đang chờ các bạn!:D</h3>
+                    <h2 class="text-uppercase text-light mb-4">[[${msg}]]</h2>
+                   <button type="button" class="btn btn-primary" onClick="cleanData();" data-target="#modal" data-toggle="modal">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Team Members</h2>
+                <h1 class="display-4 text-uppercase">Đầu bếp của chúng tôi</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                            <div class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark border-inner text-center p-4">
+                            <h4 class="text-uppercase text-primary">Full Name</h4>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                            <div class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark border-inner text-center p-4">
+                            <h4 class="text-uppercase text-primary">Full Name</h4>
+                            <p class="text-white m-0">Designation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                            <div class="team-overlay w-100 h-100 position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                    <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 mx-1" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-dark border-inner text-center p-4">
+                            <h4 class="text-uppercase text-primary">H.Nguyệt</h4>
+                            <p class="text-white m-0">Chuyên gia làm bánh của CakeCake</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Offer Start -->
+    <div class="container-fluid bg-offer my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <div class="section-title position-relative text-center mx-auto mb-4 pb-3" style="max-width: 600px;">
+                        <h2 class="text-primary font-secondary">Kombo Đặc biệt</h2>
+                        <h1 class="display-4 text-uppercase text-white">Bánh socola siêu ngon</h1>
+                    </div>
+                    <p class="text-white mb-4">Bạn sẽ được khám phá những chiếc kẹo socola siêu ngon đến từ chuyên gia làm kẹo của chúng tôi</p>
+                    <a href="" class="btn btn-primary border-inner py-3 px-5 me-3">Shop Now</a>
+                    <a href="" class="btn btn-dark border-inner py-3 px-5">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="section-title position-relative text-center mx-auto mb-5 pb-3" style="max-width: 600px;">
+                <h2 class="text-primary font-secondary">Phản hồi</h2>
+                <h6 class="display-4 text-uppercase">Ý kiến khách hàng</h6>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/Fb-2.jpg" style="width: 60px; height: 60px;">
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">T.Hương</h4>
+                            <span>Kế toán viên</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Nhà em nhận bánh rồi, mọi người ăn cứ khen ngon. Chúc shop mở được của hàng lớn hơn nhé
+                    </p>
+                </div>
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/Fb-1.jpg" style="width: 60px; height: 60px;">
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Đ.Sơn</h4>
+                            <span>Lập trình viên</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">Mình đã ăn bánh nướng trung thu của CakeCake, ăn vừa miệng. Kẹo socola của Cakecake cũng khá đậm đà
+                    </p>
+                </div>
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;">
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">T.Oanh</h4>
+                            <span>Phiên dịch viên</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">
+                    </p>
+                </div>
+                <div class="testimonial-item bg-dark text-white border-inner p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;">
+                        <div class="ps-3">
+                            <h4 class="text-primary text-uppercase mb-1">Client Name</h4>
+                            <span>Profession</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">
+                    </p>
+                </div>
+            </div>
+        </div>
+	</div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-img text-secondary" style="margin-top: 90px">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 mb-lg-n5">
+                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary border-inner p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-uppercase text-white"><i class="fa fa-birthday-cake fs-1 text-dark me-3"></i>CakeZone</h1>
+                        </a>
+                        <p class="mt-3">Có rất nhiều không gian sáng tạo trong nhà, nhà là nơi tuyệt với để họ làm việc chăm chỉ</p>
+                    </div>
+                </div>
+                  <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <h4 class="text-primary text-uppercase mb-4">Liên hệ</h4>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Hà Nội, Việt Nam</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">nguyenducson502@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+0966577314</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square border-inner rounded-0 me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-primary text-uppercase mb-4">Truy cập nhanh</h4>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
+                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
+                                <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
+                                <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <h4 class="text-primary text-uppercase mb-4">Gửi thư</h4>
+                            <p></p>
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-secondary py-4" style="background: #111111;">
+        <div class="container text-center">
+            <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
+			
+			<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+			Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+            <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+   	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/datepicker.js"></script>
+  <script src="js/main_2.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/datatables.min.js"></script>
+</body>
+<script type="text/javascript">
+	
+function load(){
+  
+var phone = document.getElementById("phone").value;  
+var password = document.getElementById("password").value;  
+  $.ajax({
+	url:'reloadOrderList',
+	type:'GET',
+	data : {"phone":phone,"password": password},
+	contentType: "text/html; charset=UTF-8",
+	success: function(response) {
+		
+		var jsonarray = JSON.parse(response);
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> <th>Tên Bánh</th><th>So luong</th>"
+				+"<th>Khach hang</th>"
+				+"<th>Ngay ship</th>"
+				+"<th>Địa chỉ</th>"
+				+"<th>Trạng thái</th>"
+			  +"</tr>");
+			for(var i =0;i< jsonarray.length;i++){
+				$("#myTable")
+				.append ("<tr> <th style='width: 20%;'>"+jsonarray[i].cakeName+"</td>"
+				+ "<td style='width: 10%;'>"+jsonarray[i].number+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].customer+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].dateShip+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].address+"</td>"
+				+ "<td style='width: 10%;'>"+jsonarray[i].status+"</td>"
+				);	
+			}
+		
+	}
+})
+
+};
+
+      $('[data-toggle="datepicker"]').datepicker({
+        autoHide: true,
+        zIndex: 2048,
+      });
+
+function cleanData(){
+	document.getElementById('phone').value="";
+	document.getElementById('password').value="";
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> <th>Tên Bánh</th><th>So luong</th>"
+				+"<th>Khach hang</th>"
+				+"<th>Ngay ship</th>"
+				+"<th>Địa chỉ</th>"
+				+"<th>Trạng thái</th>"
+			  +"</tr>");
+}
+
+function order(){
+  var favDialog = document.getElementById('favDialog');
+  clearContent();
+  favDialog.showModal();
+};
+
+function clearContent(){
+  lblMsg.innerHTML ="";
+};
+</script>
+</html>
