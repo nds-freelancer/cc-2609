@@ -1,6 +1,5 @@
 net\user\CakeController.class
 net\user\controller\UserController.class
-META-INF\maven\com.javawhizz\App\pom.xml
 net\user\impl\OrderCakeServiceImpl.class
 net\user\repository\OrderRepository.class
 net\user\entity\OrderCaView.class
@@ -10,12 +9,10 @@ net\user\entity\OrderCakeDto.class
 net\user\entity\Cake.class
 net\user\entity\OrderCake.class
 net\user\entity\OrderCa.class
-META-INF\MANIFEST.MF
 net\user\repository\UserRepository.class
 net\user\repository\CakeRepository.class
 net\user\entity\User.class
 net\user\entity\CakeDto.class
-META-INF\maven\com.javawhizz\App\pom.properties
 net\user\service\OrderCakeService.class
 net\user\service\UserService.class
 net\user\entity\OrderDto.class

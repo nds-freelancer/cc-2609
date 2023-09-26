@@ -30,7 +30,7 @@ table
 </head>
 <head>
     <meta charset="utf-8">
-    <title>KomodoStore- InfoZone Website Template</title>
+    <title>KomodoStore- InfoZone</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -102,13 +102,13 @@ table
             <div class="navbar-nav ms-auto mx-lg-auto py-0">
                 <a href="/home" class="nav-item nav-link active">Trang chủ</a>
                 <a href="about.html" class="nav-item nav-link">Java</a>
-                <a href="menu.html" class="nav-item nav-link">English</a>
-                <a href="team.html" class="nav-item nav-link">Cake</a>
+                <a href="about.html" class="nav-item nav-link">English</a>
+                <a href="about.html" class="nav-item nav-link">Cake</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Trang liên hệ</a>
                     <div class="dropdown-menu m-0">
-                        <a href="service.html" class="dropdown-item">Dịch vụ</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="about.html" class="dropdown-item">Dịch vụ</a>
+                        <a href="about.html" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
@@ -140,5 +140,145 @@ table
     </div>
     <!-- Hero End -->
 
+    <!-- Service Start -->
+    <div class="container-fluid service position-relative px-5 mt-5" style="margin-bottom: 135px;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-12 col-md-6 text-center">
+                   <button type="button" class="btn btn-primary" onClick="cleanData();" data-target="#modal" data-toggle="modal">Thêm nội dung</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 
+
+
+   <div class="modal fade" id="modal" role="dialog"  aria-labelledby="modalLabel" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="height: 600px; width: 1000px">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Nội dung</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height: 600px; width: 700px">
+           		<form action="#" th:action="@{/save-order}" th:object="${order}" method="post">
+  			<table>
+  			<tr>
+  				<th>Chủ đề</th>
+				<td><input type="text" class="form-control" id="phone" th:field="*{phone}"></td>
+		  </tr>
+		  				<td><button type="button" class="btn btn-primary" onclick="load();">Load</button></td>
+		  <br><br>
+			  <tr>
+				<th>Câu hỏi</th>
+				<td><input style="width: 700px" class="form-control" id="customer" th:field="*{customer}"></td>
+			  </tr>
+			  <tr>
+				<th>Trả lời</th>
+				<td><input style="width: 700px" class="form-control" id="address" th:field="*{address}"></td>
+				</td>
+			  </tr>
+			 </table>
+		    <menu>
+		     <button type="submit" class="btn btn-primary">Thêm</button>
+		    </menu>
+	  </form>
+	  	<div class="table-wrapper">
+		  <table style="width:900px" id ="myTable" border="1">
+		  </table>
+		</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+   	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/datepicker.js"></script>
+  <script src="js/main_2.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/datatables.min.js"></script>
+</body>
+<script type="text/javascript">
+	
+function load(){
+  
+var phone = document.getElementById("phone").value;  
+var password = "abc";  
+  $.ajax({
+	url:'reloadOrderList',
+	type:'GET',
+	data : {"phone":phone,"password": password},
+	contentType: "text/html; charset=UTF-8",
+	success: function(response) {
+		console.log(response);
+		var jsonarray = JSON.parse(response);
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> "
+				+"<th>Câu hỏi</th>"
+				+"<th>Trả lời</th> "
+			  +"</tr>");
+			for(var i =0;i< jsonarray.length;i++){
+				$("#myTable")
+				.append ("<tr><td style='width: 40%;'>"+jsonarray[i].customer+"</td>"
+				+ "<td style='width: 60%;'>"+jsonarray[i].address+"</td></tr>"
+				);	
+			}
+		
+	}
+})
+
+};
+
+      $('[data-toggle="datepicker"]').datepicker({
+        autoHide: true,
+        zIndex: 2048,
+      });
+
+function cleanData(){
+	document.getElementById('phone').value="";
+	document.getElementById('password').value="";
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> <th>Tên Bánh</th><th>So luong</th>"
+				+"<th>Khach hang</th>"
+				+"<th>Ngay ship</th>"
+				+"<th>Địa chỉ</th>"
+				+"<th>Trạng thái</th>"
+			  +"</tr>");
+}
+
+function order(){
+  var favDialog = document.getElementById('favDialog');
+  clearContent();
+  favDialog.showModal();
+};
+
+function clearContent(){
+  lblMsg.innerHTML ="";
+};
+</script>
 </html>

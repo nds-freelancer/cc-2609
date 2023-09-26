@@ -51,7 +51,6 @@ private OrderCakeService orderCakeService;
 		model.addAttribute("listCake",listCakeDto);
 		model.addAttribute("MSG","ZZZZZZZZZZZZZ");
 		model.addAttribute("order",order);
-		System.out.println("Size:");
 		return "index";
 	}
   
@@ -142,7 +141,7 @@ public String contact(ModelMap model) {
 	OrderDto order = new OrderDto();
 	model.addAttribute("order",order);
 	model.addAttribute("msg","Thêm mới thành công! Chúng tôi sẽ liên hệ với "+orderDto.getCustomer()+" sớm theo sdt trên!");
-    return "service";
+	return "index";
   }
   
   @GetMapping("/import.html")

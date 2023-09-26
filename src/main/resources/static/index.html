@@ -140,5 +140,155 @@ table
     </div>
     <!-- Hero End -->
 
+   <div class="modal fade" id="modal" role="dialog"  aria-labelledby="modalLabel" tabindex="-1">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  style="height: 600px; width: 800px">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Đặt hàng</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="height: 600px; width: 700px">
+           		<form action="#" th:action="@{/save-order}" th:object="${order}" method="post">
+  			<table>
+  			<tr>
+  				<th>Số điện thoại</th>
+				<td><input type="text" class="form-control" id="phone" th:field="*{phone}"></td>
+				<th>Password</th>
+				<td><input type="password" class="form-control" id="password" ></td>
+				<td><button type="button" class="btn btn-primary" onclick="load();">Load</button> </td>
+		  </tr>
+		  <br><br>
+			  <tr>
+				<th>Tên bánh</th>
+				<td>
+					<select class="form-control" name="cakeid"> id="dropDownList">
+					    <option value="0">Chọn bánh</option>
+					    <option th:each="cake : ${listCake}" th:value="${cake.cakeid}" th:text="${cake.cakename}"></option>
+					</select>				
+					</td>
+				<th>Số lượng</th>
+				<td><input type="text" class="form-control" id="number" th:field="*{number}"></td>
+			  </tr>
+			  <tr>
+				<th>Tên khách hàng</th>
+				<td><input type="text" class="form-control" id="customer" th:field="*{customer}"></td>
+				<th>Email</th>
+<!--				<td><input type="text" class="form-control" id="email" th:field="*{email}"></td>-->
+			  </tr>
+			  <tr>
+				<th>Địa chỉ</th>
+				<td><input type="text" class="form-control" id="address" th:field="*{address}"></td>
+				<th>Ngày nhận</th>
+				<td><input type="text" class="form-control" id="image" data-toggle="datepicker" th:field="*{dateship}"></td>
+				<td>
+				</td>
+			  </tr>
+			 </table>
+		    <menu>
+		     <button type="submit" class="btn btn-primary">Thêm</button>
+		    </menu>
+	  </form>
+	  	<div class="table-wrapper">
+		  <table style="width:700px" id ="myTable" border="1">
+		  </table>
+		</div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary border-inner py-3 fs-4 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+   	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/datepicker.js"></script>
+  <script src="js/main_2.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/datatables.min.js"></script>
+</body>
+<script type="text/javascript">
+	
+function load(){
+  
+var phone = document.getElementById("phone").value;  
+var password = document.getElementById("password").value;  
+  $.ajax({
+	url:'reloadOrderList',
+	type:'GET',
+	data : {"phone":phone,"password": password},
+	contentType: "text/html; charset=UTF-8",
+	success: function(response) {
+		console.log(response);
+		var jsonarray = JSON.parse(response);
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> <th>Tên Bánh</th><th>So luong</th>"
+				+"<th>Khach hang</th>"
+				+"<th>Ngay ship</th>"
+				+"<th>Địa chỉ</th>"
+				+"<th>Trạng thái</th>"
+			  +"</tr>");
+			for(var i =0;i< jsonarray.length;i++){
+				$("#myTable")
+				.append ("<tr> <th style='width: 20%;'>"+jsonarray[i].cakename+"</td>"
+				+ "<td style='width: 10%;'>"+jsonarray[i].number+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].customer+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].dateship+"</td>"
+				+ "<td style='width: 20%;'>"+jsonarray[i].address+"</td>"
+				+ "<td style='width: 10%;'>"+jsonarray[i].statusor+"</td>"
+				);	
+			}
+		
+	}
+})
+
+};
+
+      $('[data-toggle="datepicker"]').datepicker({
+        autoHide: true,
+        zIndex: 2048,
+      });
+
+function cleanData(){
+	document.getElementById('phone').value="";
+	document.getElementById('password').value="";
+		var rowlast= $('#myTable tr:last').index();
+			for(var i=0; i< rowlast+1;i++){
+				$('#myTable tr:first').remove();
+			}	
+			$("#myTable")
+				.append("<tr> <th>Tên Bánh</th><th>So luong</th>"
+				+"<th>Khach hang</th>"
+				+"<th>Ngay ship</th>"
+				+"<th>Địa chỉ</th>"
+				+"<th>Trạng thái</th>"
+			  +"</tr>");
+}
+
+function order(){
+  var favDialog = document.getElementById('favDialog');
+  clearContent();
+  favDialog.showModal();
+};
+
+function clearContent(){
+  lblMsg.innerHTML ="";
+};
+</script>
 </html>
