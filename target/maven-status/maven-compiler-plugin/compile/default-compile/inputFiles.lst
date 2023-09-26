@@ -10,10 +10,12 @@ H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\repository\OrderRep
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\Cake.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\OrderDto.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\UserDto.java
+H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\security\UserInfoService.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\OrderCaView.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\User.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\service\CakeService.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\impl\UserServiceImpl.java
+H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\security\SecurityConfig.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\service\OrderCakeService.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\impl\OrderCakeServiceImpl.java
 H:\workspaces\26092023\cc-new\cc-2609\src\main\java\net\user\entity\OrderCakeDto.java

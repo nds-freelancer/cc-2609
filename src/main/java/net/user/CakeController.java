@@ -189,7 +189,7 @@ public String contact(ModelMap model) {
   			listOcView.add(caView);
   		}
   		
-  		ArrayNode listData = objectMapper.valueToTree(listOcView);
+  		ArrayNode listData = objectMapper.valueToTree(listOcView);        
   		byte[] byteText =listData.toString().getBytes(Charset.forName("UTF-8"));
   		System.out.print("byteText:"+byteText);
 
