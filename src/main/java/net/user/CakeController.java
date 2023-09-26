@@ -76,7 +76,10 @@ public String testimonial(ModelMap model) {
 
 @RequestMapping("/about.html")
 public String about(ModelMap model) {
-		System.out.println("Size:");
+	
+	List<OrderCa> listOrderCa = orderCakeService.getAllOrderCake("java");
+	model.addAttribute("lstQ",listOrderCa);
+		System.out.println("Size:"+listOrderCa.size());
 	return "about";
 }
 	

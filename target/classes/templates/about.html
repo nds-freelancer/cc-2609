@@ -90,5 +90,11 @@
         </div>
     </nav>
     <!-- Navbar End -->
-	This is Cake what i done!
+        <div class="col-14" th:each="quest: ${lstQ}">
+				   	<h6 style="font-size:20px;"><td th:utext="${quest.customer}"></td></h6>
+				   	<h6 style="font-size:14px; font-weight: 300"><td th:text="${quest.address}"></td></h6>
+
+         </div>
+	
+	
 </html>
