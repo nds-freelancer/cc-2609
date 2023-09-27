@@ -1,11 +1,14 @@
+net\user\repository\ProductRepository.class
 net\user\CakeController.class
 net\user\controller\UserController.class
 net\user\impl\OrderCakeServiceImpl.class
+net\user\impl\ProductServiceImpl.class
 net\user\repository\OrderRepository.class
 net\user\security\SecurityConfig.class
 net\user\entity\OrderCaView.class
 net\user\impl\UserServiceImpl.class
 net\user\service\CakeService.class
+net\user\service\ProductService.class
 net\user\entity\OrderCakeDto.class
 net\user\entity\Cake.class
 net\user\entity\OrderCake.class
@@ -13,6 +16,7 @@ net\user\entity\OrderCa.class
 net\user\repository\UserRepository.class
 net\user\repository\CakeRepository.class
 net\user\entity\User.class
+net\user\entity\Product.class
 net\user\entity\CakeDto.class
 net\user\service\OrderCakeService.class
 net\user\service\UserService.class

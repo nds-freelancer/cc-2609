@@ -23,10 +23,10 @@ public class SecurityConfig{
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/css/**","/css/**","/lib/**","/img/**").permitAll()
+                .requestMatchers("/css/**","/css/**","/lib/**","/img/**","/media/**").permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/home/**","/about.html","contact.html").authenticated()
+                .requestMatchers("/fragments/**","/category","/products/**","/home/**","/about.html","contact.html","products.html").authenticated()
                 .and().formLogin()
                 .and().build();
     }

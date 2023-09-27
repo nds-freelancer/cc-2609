@@ -4,13 +4,18 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -19,8 +24,10 @@ import net.user.entity.CakeDto;
 import net.user.entity.OrderCa;
 import net.user.entity.OrderCaView;
 import net.user.entity.OrderDto;
+import net.user.entity.Product;
 import net.user.service.CakeService;
 import net.user.service.OrderCakeService;
+import net.user.service.ProductService;
 
 @Controller
 public class CakeController {
@@ -31,6 +38,30 @@ public class CakeController {
 @Autowired 
 private OrderCakeService orderCakeService;
 
+@Autowired 
+private ProductService productService;
+
+@RequestMapping("/category")
+public String category( Model model, @RequestParam(value="page", required = false) Integer p) {
+    int perPage = 20;
+    int page = (p != null) ? p: 0;
+
+    Pageable pageable = PageRequest.of(page, perPage);
+    long count = 0;
+
+        Page<Product> products = productService.findAll(pageable);
+        count = productService.countByCategoryId("4");
+        model.addAttribute("products", products);
+
+    double pageCount = Math.ceil((double) count / (double) perPage);
+
+    model.addAttribute("pageCount", (int) pageCount);
+    model.addAttribute("perPage", perPage);
+    model.addAttribute("count", 10);
+    model.addAttribute("page", page);
+
+    return "products";
+}
 
 	@GetMapping("/home")
 	public String home(ModelMap model) {
