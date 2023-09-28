@@ -1,6 +1,8 @@
 package net.user.impl;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -30,5 +32,9 @@ public class ProductServiceImpl implements ProductService {
 		return productRepository.countByCategoryId(catid);
 	}
 
+	@Override
+	public Optional<Product> findById(Integer id) {
+		return productRepository.findById(id);
+	}
 
 }

@@ -1,6 +1,8 @@
 package net.user.repository;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,4 +16,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 	List<Product> findAllByCategoryId(String catid, Pageable pageable);
 
 	long countByCategoryId(String catid);
+	
+	Optional<Product> findById(Integer id);
 }

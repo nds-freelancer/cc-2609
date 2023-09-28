@@ -2,9 +2,13 @@ package net.user;
 
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
@@ -21,6 +25,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import net.user.entity.Cake;
 import net.user.entity.CakeDto;
+import net.user.entity.Cart;
 import net.user.entity.OrderCa;
 import net.user.entity.OrderCaView;
 import net.user.entity.OrderDto;
@@ -29,17 +34,69 @@ import net.user.service.CakeService;
 import net.user.service.OrderCakeService;
 import net.user.service.ProductService;
 
+
 @Controller
 public class CakeController {
 	
 @Autowired
-  private CakeService cakeService;
+private CakeService cakeService;
 
 @Autowired 
 private OrderCakeService orderCakeService;
 
 @Autowired 
 private ProductService productService;
+
+@RequestMapping("/view")
+public String view(HttpSession session, Model model) {
+    if (session.getAttribute("cart") == null) {
+        return "redirect:/";
+    }
+    Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+    model.addAttribute("cart", cart);
+    model.addAttribute("notCartViewPage", true);
+    return "cart";
+}
+
+
+@RequestMapping("/add/{id}")
+public String add(@PathVariable int id, HttpSession session, Model model, @RequestParam(value = "cartPage", required = false) String cartPage) {
+    Product product = productService.findById(id).get();
+    
+    if (session.getAttribute("cart") == null) {
+        Map<Integer, Cart> cart = new HashMap<>();
+        cart.put(id, new Cart(id, product.getName(), product.getPrice(), 1, product.getImage()));
+        session.setAttribute("cart", cart);
+    } else {
+        Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+        if (cart.containsKey(id)) {
+            int qty = cart.get(id).getQuantity();
+            cart.put(id, new Cart(id, product.getName(), product.getPrice(), ++qty, product.getImage()));
+        } else {
+            cart.put(id, new Cart(id, product.getName(), product.getPrice(), 1, product.getImage()));
+            session.setAttribute("cart", cart);
+        }
+    }
+    
+    Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+
+    int size = 0;
+    double total = 0;
+    for (Cart value : cart.values()) {
+        size += value.getQuantity();
+        total += value.getQuantity() * Double.parseDouble(value.getPrice());
+    }
+
+    model.addAttribute("csize", size);
+    model.addAttribute("ctotal", total);
+
+    if (cartPage != null) {
+        return "redirect:/view";
+    }
+    
+    return "cart_view";
+}
+
 
 @RequestMapping("/category")
 public String category( Model model, @RequestParam(value="page", required = false) Integer p) {
@@ -49,7 +106,7 @@ public String category( Model model, @RequestParam(value="page", required = fals
     Pageable pageable = PageRequest.of(page, perPage);
     long count = 0;
 
-        Page<Product> products = productService.findAll(pageable);
+    List<Product> products = productService.findAllByCategoryId("4", pageable);
         count = productService.countByCategoryId("4");
         model.addAttribute("products", products);
 
@@ -61,6 +118,28 @@ public String category( Model model, @RequestParam(value="page", required = fals
     model.addAttribute("page", page);
 
     return "products";
+}
+
+@RequestMapping("/bds")
+public String bds( Model model, @RequestParam(value="page", required = false) Integer p) {
+    int perPage = 20;
+    int page = (p != null) ? p: 0;
+
+    Pageable pageable = PageRequest.of(page, perPage);
+    long count = 0;
+
+        List<Product> products = productService.findAllByCategoryId("7", pageable);
+        count = productService.countByCategoryId("4");
+        model.addAttribute("products", products);
+
+    double pageCount = Math.ceil((double) count / (double) perPage);
+
+    model.addAttribute("pageCount", (int) pageCount);
+    model.addAttribute("perPage", perPage);
+    model.addAttribute("count", 10);
+    model.addAttribute("page", page);
+
+    return "bds";
 }
 
 	@GetMapping("/home")
@@ -226,5 +305,46 @@ public String contact(ModelMap model) {
 
   		return byteText;
 }
-  	
+ 
+
+  @GetMapping("/subtract/{id}")
+  public String subtract(@PathVariable int id, HttpSession session, Model model, HttpServletRequest httpServletRequest) {
+      Optional<Product> product = productService.findById(id);
+      Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+
+      int qty = cart.get(id).getQuantity();
+      if (qty == 1) {
+          cart.remove(id);
+          if (cart.size() == 0) {
+              session.removeAttribute("cart");
+          }
+      } else {
+          cart.put(id, new Cart(id, product.get().getName(), product.get().getPrice(), --qty, product.get().getImage()));
+      }
+
+      String refererLink = httpServletRequest.getHeader("referer");
+      return "redirect:" + refererLink;
+  }
+
+  @GetMapping("/remove/{id}")
+  public String remove(@PathVariable int id, HttpSession session, Model model, HttpServletRequest httpServletRequest) {
+      
+      Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+      cart.remove(id);
+      if (cart.size() == 0) {
+          session.removeAttribute("cart");
+      }
+
+      String refererLink = httpServletRequest.getHeader("referer");
+      return "redirect:" + refererLink;
+  }
+
+  @GetMapping("/clear")
+  public String clear(HttpSession session, HttpServletRequest httpServletRequest) {
+      session.removeAttribute("cart");
+
+      String refererLink = httpServletRequest.getHeader("referer");
+      return "redirect:" + refererLink;
+  }
+  
 }
