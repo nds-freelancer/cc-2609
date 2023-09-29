@@ -27,7 +27,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid px-0 d-none d-lg-block">
@@ -85,6 +84,7 @@
             </div>
         </div>
     </nav>
+ 
     <div class="container-fluid mt-5">
         <div class="row">
             <div th:replace="/fragments/categories"></div>
@@ -108,25 +108,7 @@
                                 <div class="btn btn-sm btn-success productAdded hide">Product added!</div>
                             </div>
                         </div>
-
                     </div>
-                    <nav class="mt-3" th:if="${count > perPage}">
-                        <ul class="pagination">
-                            <li class="page-item" th:if="${page > 0}">
-                                <a th:href="@{${#httpServletRequest.requestURI}} + '?page=__${page - 1}__'"
-                                    class="page-link">Previous</a>
-                            </li>
-                            <li class="page-item" th:each="number : ${#numbers.sequence(0, pageCount - 1)}"
-                                th:classappend="${page==number} ? 'active' : ''">
-                                <a th:href="@{${#httpServletRequest.requestURI}} + '?page=__${number}__'"
-                                    class="page-link" th:text="${number+1}"></a>
-                            </li>
-                            <li class="page-item" th:if="${page < pageCount - 1}">
-                                <a th:href="@{${#httpServletRequest.requestURI}} + '?page=__${page + 1}__'"
-                                    class="page-link">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
