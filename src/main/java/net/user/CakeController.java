@@ -50,11 +50,13 @@ private ProductService productService;
 @RequestMapping("/view")
 public String view(HttpSession session, Model model) {
     if (session.getAttribute("cart") == null) {
+    	
         return "redirect:/";
     }
     Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
     model.addAttribute("cart", cart);
     model.addAttribute("notCartViewPage", true);
+    
     return "cart";
 }
 
@@ -82,13 +84,16 @@ public String add(@PathVariable int id, HttpSession session, Model model, @Reque
 
     int size = 0;
     double total = 0;
+    boolean cartActive = false;
     for (Cart value : cart.values()) {
         size += value.getQuantity();
         total += value.getQuantity() * Double.parseDouble(value.getPrice());
+        cartActive= true;
     }
-
+    model.addAttribute("cartActive", cartActive);
     model.addAttribute("csize", size);
     model.addAttribute("ctotal", total);
+    
 
     if (cartPage != null) {
         return "redirect:/view";
