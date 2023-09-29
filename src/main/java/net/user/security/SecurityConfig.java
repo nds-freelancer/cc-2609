@@ -26,7 +26,7 @@ public class SecurityConfig{
                 .requestMatchers("/css/**","/css/**","/lib/**","/img/**","/media/**").permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/fragments/**","/add/1","/add","/add/**","/add/*","/subtract/**","/clear","/view/**","/remove/**","/category","/bds","/products","/home/**","/about.html","contact.html","products.html").authenticated()
+                .requestMatchers("/fragments/**","/add/1","/add","/add/**","/add/*","/subtract/**","/clear","/view/**","/remove/**","/category","/bds","/products","/home/**","/about.html","contact.html").authenticated()
                 .and().formLogin()
                 .and().build();
     }
