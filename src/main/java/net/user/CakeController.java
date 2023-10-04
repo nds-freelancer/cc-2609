@@ -352,4 +352,13 @@ public String contact(ModelMap model) {
       return "redirect:" + refererLink;
   }
   
+  @RequestMapping("/eng.html")
+  public String eng(ModelMap model) {
+  	
+  	List<OrderCa> listOrderCa = orderCakeService.getAllOrderCake("eng");
+  	model.addAttribute("lstQ",listOrderCa);
+  		System.out.println("Size:"+listOrderCa.size());
+  	return "eng";
+  }
+  
 }
