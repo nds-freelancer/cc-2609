@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -188,13 +189,42 @@ public String testimonial(ModelMap model) {
 	return "testimonial";
 }
 
-@RequestMapping("/about.html")
-public String about(ModelMap model) {
+@RequestMapping(value = {"/about"}, method = RequestMethod.GET)
+public String about(ModelMap model,  @RequestParam(value="page",required = false) String p) {
+
+	List<OrderCa> listOrderCa = new ArrayList<OrderCa>();
 	
-	List<OrderCa> listOrderCa = orderCakeService.getAllOrderCake("java");
+	String requestedValue = p;
+	
+	if(requestedValue.contains("basic")) {
+		requestedValue = "basic" ;
+	} else if(requestedValue.contains("oop")) {
+		requestedValue = "oop" ;
+	} else if(requestedValue.contains("string")) {
+		requestedValue = "string" ;
+	} else if(requestedValue.contains("thread")) {
+		requestedValue = "thread" ;
+	} else if(requestedValue.contains("io")) {
+		requestedValue = "io" ;
+	} else if(requestedValue.contains("collection")) {
+		requestedValue = "collection" ;
+	}
+	
+	listOrderCa = orderCakeService.getAllOrderCake(requestedValue);
+
+	model.addAttribute("lstQ",listOrderCa);
+	System.out.println("Size:"+listOrderCa.size());
+	
+	return "about";
+}
+
+@RequestMapping("/eng.html")
+public String eng(ModelMap model) {
+	
+	List<OrderCa> listOrderCa = orderCakeService.getAllOrderCake("eng");
 	model.addAttribute("lstQ",listOrderCa);
 		System.out.println("Size:"+listOrderCa.size());
-	return "about";
+	return "eng";
 }
 	
 //@GetMapping(value={"", "/index.html"})
@@ -350,15 +380,6 @@ public String contact(ModelMap model) {
 
       String refererLink = httpServletRequest.getHeader("referer");
       return "redirect:" + refererLink;
-  }
-  
-  @RequestMapping("/eng.html")
-  public String eng(ModelMap model) {
-  	
-  	List<OrderCa> listOrderCa = orderCakeService.getAllOrderCake("eng");
-  	model.addAttribute("lstQ",listOrderCa);
-  		System.out.println("Size:"+listOrderCa.size());
-  	return "eng";
   }
   
 }
