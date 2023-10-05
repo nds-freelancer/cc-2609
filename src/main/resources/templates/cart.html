@@ -188,9 +188,8 @@
         <script>
             $(function () {
                 $("a.checkout").click(function (e) {
-                    e.preventDefault();
-                    $("div.overlay").removeClass("d-none");
-                    $.get("/cart/clear", {}, function () { });
+	
+					console.log("RRRRRR");
                     $("form#paypalform").submit();
                 });
             });
