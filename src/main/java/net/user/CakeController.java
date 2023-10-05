@@ -208,6 +208,14 @@ public String about(ModelMap model,  @RequestParam(value="page",required = false
 		requestedValue = "io" ;
 	} else if(requestedValue.contains("collection")) {
 		requestedValue = "collection" ;
+	} else if(requestedValue.contains("springmvc")) {
+		requestedValue = "springmvc" ;
+	} else if(requestedValue.contains("ss")) {
+		requestedValue = "ss" ;
+	} else if(requestedValue.contains("sboot")) {
+		requestedValue = "sboot" ;
+	} else if(requestedValue.contains("sjdbc")) {
+		requestedValue = "sjdbc" ;
 	}
 	
 	listOrderCa = orderCakeService.getAllOrderCake(requestedValue);
