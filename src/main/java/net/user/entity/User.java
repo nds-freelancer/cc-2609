@@ -23,6 +23,9 @@ public class User {
     
     @Column(nullable = false)
     private String password;
+ 
+    @Column(nullable = false)
+    private String image;
     
 	public void setUsername(String username) {
 		this.username = username;
