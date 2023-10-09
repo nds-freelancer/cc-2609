@@ -23,7 +23,7 @@ public class SecurityConfig{
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/css/**","/css/**","/lib/**","/img/**","/media/**","/api/users/token").permitAll()
+                .requestMatchers("/css/**","/css/**","/lib/**","/img/**","/media/**","/api/users/token","/api/users").permitAll()
                 .and()
                 .authorizeHttpRequests()
                 .requestMatchers("/fragments/**","/fragments/cart_partial","/add/1","/add","/add/**","/add/*","/subtract/**","/clear","/view/**","/remove/**","/category","/bds","/products","/home","/home/**","/about","/eng.html","/basic/**","/oop/**","/string/**","contact.html").authenticated()
