@@ -148,7 +148,7 @@ public String bds( Model model, @RequestParam(value="page", required = false) In
     return "bds";
 }
 
-	@GetMapping("/home")
+	@GetMapping({"/", "/home"})
 	public String home(ModelMap model) {
 		
 		List<Cake> listCake = cakeService.getAllCakes();

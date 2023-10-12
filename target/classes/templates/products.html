@@ -148,7 +148,7 @@
                             </p>
                             <h4 th:text="${product.name}"></h4>
                             <div class="desc" th:utext="${product.description}"></div>
-                            <p th:text="'$' + ${product.price}"></p>
+                            <p th:text="${product.price} +' VND'"></p>
                             <div style="position: relative;">
                                 <p>
                                     <a class="btn btn-primary addToCart" th:attr="data-id=${product.id}" th:href="@{'/add/' + ${product.id}}">Add to cart</a>

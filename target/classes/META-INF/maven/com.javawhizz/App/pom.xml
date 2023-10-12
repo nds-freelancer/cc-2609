@@ -57,6 +57,58 @@
 		    <version>2.5</version>
 		    <scope>provided</scope>
 		</dependency>
+		
+	<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-feature</artifactId>
+    <version>0.38</version>
+	</dependency>
+	<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-io</artifactId>
+    <version>0.38</version>
+	</dependency>
+	<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-ip</artifactId>
+    <version>0.38</version>
+	</dependency>
+	<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-types</artifactId>
+    <version>0.38</version>
+	</dependency>
+	<dependency>
+    <groupId>org.boofcv</groupId>
+    <artifactId>boofcv-geo</artifactId>
+    <version>0.38</version>
+	</dependency>
+		<dependency>
+		    <groupId>org.boofcv</groupId>
+		    <artifactId>boofcv-swing</artifactId>
+		    <version>0.36</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.ddogleg</groupId>
+		    <artifactId>ddogleg</artifactId>
+		    <version>0.21</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.ejml</groupId>
+		    <artifactId>ejml-cdense</artifactId>
+		    <version>0.40</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.bytedeco.javacpp-presets</groupId>
+		    <artifactId>ffmpeg</artifactId>
+		    <version>4.1-1.4.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.georegression</groupId>
+		    <artifactId>georegression</artifactId>
+		    <version>0.24</version>
+		</dependency>
+		
 		    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>

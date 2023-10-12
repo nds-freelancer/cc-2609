@@ -23,10 +23,10 @@ public class SecurityConfig{
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/css/**","/css/**","/lib/**","/img/**","/media/**","/api/users/token","/api/users/all").permitAll()
+                .requestMatchers("/","/fragments/**","/fragments/cart_partial","/css/**","/css/**","/lib/**","/img/**","/media/**","/api/users/token","/api/users/all","/category","/products","/home","/api/users/uploadFile","/home/**","/about","/eng.html","/basic/**","/oop/**","/string/**","contact.html").permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/fragments/**","/fragments/cart_partial","/add/1","/add","/add/**","/add/*","/subtract/**","/clear","/view/**","/remove/**","/category","/bds","/products","/home","/home/**","/about","/eng.html","/basic/**","/oop/**","/string/**","contact.html").authenticated()
+                .requestMatchers("/fragments/**","/fragments/cart_partial","/add/1","/add","/add/**","/add/*","/subtract/**","/clear","/view/**","/remove/**","/bds").authenticated()
                 .and().formLogin()
                 .and().build();
     }
